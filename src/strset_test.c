@@ -17,24 +17,76 @@ struct Lines {
     int     num;
 };
 
-bool iter_set_remove(const char *key, void *udata) {
-    return false;
+StrSetAction iter_set_remove(const char *key, void *udata) {
+    return SSA_remove;
 }
 
-bool iter_set_cmp(const char *key, void *udata) {
+StrSetAction iter_set_cmp(const char *key, void *udata) {
     struct Lines *lines = udata;
 
     for (int i = 0; i < lines->num; ++i) {
         if (!strcmp(lines->lines[i], key)) {
-            return true;
+            return SSA_next;
         }
     }
 
     printf("iter_set: key %s not found in each itertor\n", key);
     munit_assert(false);
 
-    return true;
+    return SSA_next;
 }
+
+static MunitResult test_compare(
+    const MunitParameter params[], void* data
+) {
+    StrSet *set1 = strset_new();
+    munit_assert_ptr_not_null(set1);
+
+    StrSet *set2 = strset_new();
+    munit_assert_ptr_not_null(set2);
+
+    StrSet *set3 = strset_new();
+    munit_assert_ptr_not_null(set3);
+
+    const char *lines[] = {
+        "privet",
+        "Ya ded",
+        "obed",
+        "privet11",
+        "Ya ne ded",
+    };
+
+    const char *other_lines[] = {
+        "prIvet",
+        "ya ded",
+        "_obed",
+        "prvet11",
+        "Yane ded",
+        "some line",
+    };
+    
+    int lines_num = sizeof(lines) / sizeof(lines[0]);
+    int other_lines_num = sizeof(other_lines) / sizeof(other_lines[0]);
+
+    for (int i = 0; i< lines_num; ++i) {
+        strset_add(set1, lines[i]);
+        strset_add(set2, lines[i]);
+    }
+
+    for (int i = 0; i< other_lines_num; ++i) {
+        strset_add(set3, other_lines[i]);
+    }
+
+    munit_assert(strset_compare(set1, set2));
+    munit_assert(!strset_compare(set1, set3));
+    munit_assert(!strset_compare(set2, set3));
+
+    strset_free(set1);
+    strset_free(set2);
+    strset_free(set3);
+    return MUNIT_OK;
+}
+
 
 static MunitResult test_new_add_exist_free(
     const MunitParameter params[], void* data
@@ -99,6 +151,14 @@ static MunitTest test_suite_tests[] = {
   {
     (char*) "/new_add_exist_free",
     test_new_add_exist_free,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+  {
+    (char*) "/compare",
+    test_compare,
     NULL,
     NULL,
     MUNIT_TEST_OPTION_NONE,
