@@ -2,6 +2,7 @@
 // vim: fdm=marker
 
 #include "koh_destral_ecs.h"
+#include "koh_rand.h"
 #include "koh_strset.h"
 #include "munit.h"
 #include "koh.h"
@@ -87,6 +88,43 @@ static MunitResult test_compare(
     return MUNIT_OK;
 }
 
+static MunitResult test_massive_add_get(
+    const MunitParameter params[], void* data
+) {
+    StrSet *set = strset_new();
+    munit_assert_ptr_not_null(set);
+
+    xorshift32_state rnd1 = xorshift32_init();
+    usleep(200);
+    xorshift32_state rnd2 = xorshift32_init();
+    const int iters = 1000000;
+
+    char **lines = calloc(iters, sizeof(lines[0]));
+    for (int i = 0; i< iters; ++i) {
+        char buf[64] = {};
+        sprintf(buf, "%u%u", xorshift32_rand(&rnd1), xorshift32_rand(&rnd2));
+        lines[i] = strdup(buf);
+        strset_add(set, lines[i]);
+    }
+
+    for (int i = 0; i < iters; ++i) {
+        munit_assert(strset_exist(set, lines[i]));
+    }
+
+    /*for (int i = 0; i< other_lines_num; ++i) {*/
+        /*munit_assert(!strset_exist(set, other_lines[i]));*/
+    /*}*/
+
+    for (int j = 0; j < iters; j++) {
+        if (lines[j])
+            free(lines[j]);
+    }
+    free(lines);
+    strset_clear(set);
+
+    strset_free(set);
+    return MUNIT_OK;
+}
 
 static MunitResult test_new_add_exist_free(
     const MunitParameter params[], void* data
@@ -151,6 +189,14 @@ static MunitTest test_suite_tests[] = {
   {
     (char*) "/new_add_exist_free",
     test_new_add_exist_free,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+  {
+    (char*) "/massive_add_get",
+    test_massive_add_get,
     NULL,
     NULL,
     MUNIT_TEST_OPTION_NONE,
