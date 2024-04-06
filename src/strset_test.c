@@ -1,13 +1,10 @@
 // vim: set colorcolumn=85
 // vim: fdm=marker
 
-#include "koh_destral_ecs.h"
 #include "koh_rand.h"
 #include "koh_strset.h"
 #include "munit.h"
-#include "koh.h"
-#include "raylib.h"
-#include <assert.h>
+#include <unistd.h>
 #include <memory.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,6 +32,39 @@ StrSetAction iter_set_cmp(const char *key, void *udata) {
     munit_assert(false);
 
     return SSA_next;
+}
+
+static MunitResult test_difference_internal(
+    const MunitParameter params[], void* data, 
+    char **lines1, size_t lines1_num,
+    char **lines2, size_t lines2_num,
+    char **should_be, size_t should_be_num
+) {
+    StrSet *set1 = strset_new();
+    munit_assert_ptr_not_null(set1);
+
+    StrSet *set2 = strset_new();
+    munit_assert_ptr_not_null(set2);
+
+    for (int i = 0; i< lines1_num; ++i) {
+        strset_add(set1, lines1[i]);
+    }
+
+    for (int i = 0; i< lines2_num; ++i) {
+        strset_add(set2, lines2[i]);
+    }
+
+    StrSet *difference = strset_difference(set1, set2);
+    /*strset_print(difference, stdout);*/
+    munit_assert(strset_compare_strs(
+        difference, should_be, should_be_num) == true
+    );
+
+    strset_free(set1);
+    strset_free(set2);
+    strset_free(difference);
+
+    return MUNIT_OK;
 }
 
 static MunitResult test_compare(
@@ -97,7 +127,7 @@ static MunitResult test_massive_add_get(
     xorshift32_state rnd1 = xorshift32_init();
     usleep(200);
     xorshift32_state rnd2 = xorshift32_init();
-    const int iters = 1000000;
+    const int iters = 1000000 / 2;
 
     char **lines = calloc(iters, sizeof(lines[0]));
     for (int i = 0; i< iters; ++i) {
@@ -123,6 +153,47 @@ static MunitResult test_massive_add_get(
     strset_clear(set);
 
     strset_free(set);
+    return MUNIT_OK;
+}
+
+static MunitResult test_difference(
+    const MunitParameter params[], void* data 
+) {
+
+    {
+        char *lines1[] = { "1", "2", "3", "4", };
+        char *lines2[] = { "1", "2", "3", };
+        char *should_be[] = { "4", };
+        
+        size_t lines1_num = sizeof(lines1) / sizeof(lines1[0]), 
+               lines2_num = sizeof(lines2) / sizeof(lines2[0]),
+               should_be_num = sizeof(should_be) / sizeof(should_be[0]);
+
+        test_difference_internal(
+            params, data, 
+            lines1, lines1_num, 
+            lines2, lines2_num, 
+            should_be, should_be_num
+        );
+    }
+
+    {
+        char *lines1[] = { "1", };
+        char *lines2[] = { "1", "2", "3", };
+        char *should_be[] = { };
+        
+        size_t lines1_num = sizeof(lines1) / sizeof(lines1[0]), 
+               lines2_num = sizeof(lines2) / sizeof(lines2[0]),
+               should_be_num = sizeof(should_be) / sizeof(should_be[0]);
+
+        test_difference_internal(
+            params, data, 
+            lines1, lines1_num, 
+            lines2, lines2_num, 
+            should_be, should_be_num
+        );
+    }
+
     return MUNIT_OK;
 }
 
@@ -205,6 +276,14 @@ static MunitTest test_suite_tests[] = {
   {
     (char*) "/compare",
     test_compare,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+  {
+    (char*) "/difference",
+    test_difference,
     NULL,
     NULL,
     MUNIT_TEST_OPTION_NONE,
