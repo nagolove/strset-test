@@ -40,10 +40,10 @@ static MunitResult test_difference_internal(
     char **lines2, size_t lines2_num,
     char **should_be, size_t should_be_num
 ) {
-    StrSet *set1 = strset_new();
+    StrSet *set1 = strset_new(NULL);
     munit_assert_ptr_not_null(set1);
 
-    StrSet *set2 = strset_new();
+    StrSet *set2 = strset_new(NULL);
     munit_assert_ptr_not_null(set2);
 
     for (int i = 0; i< lines1_num; ++i) {
@@ -55,7 +55,6 @@ static MunitResult test_difference_internal(
     }
 
     StrSet *difference = strset_difference(set1, set2);
-    /*strset_print(difference, stdout);*/
     munit_assert(strset_compare_strs(
         difference, should_be, should_be_num) == true
     );
@@ -70,13 +69,13 @@ static MunitResult test_difference_internal(
 static MunitResult test_compare(
     const MunitParameter params[], void* data
 ) {
-    StrSet *set1 = strset_new();
+    StrSet *set1 = strset_new(NULL);
     munit_assert_ptr_not_null(set1);
 
-    StrSet *set2 = strset_new();
+    StrSet *set2 = strset_new(NULL);
     munit_assert_ptr_not_null(set2);
 
-    StrSet *set3 = strset_new();
+    StrSet *set3 = strset_new(NULL);
     munit_assert_ptr_not_null(set3);
 
     const char *lines[] = {
@@ -121,7 +120,7 @@ static MunitResult test_compare(
 static MunitResult test_massive_add_get(
     const MunitParameter params[], void* data
 ) {
-    StrSet *set = strset_new();
+    StrSet *set = strset_new(NULL);
     munit_assert_ptr_not_null(set);
 
     xorshift32_state rnd1 = xorshift32_init();
@@ -140,10 +139,6 @@ static MunitResult test_massive_add_get(
     for (int i = 0; i < iters; ++i) {
         munit_assert(strset_exist(set, lines[i]));
     }
-
-    /*for (int i = 0; i< other_lines_num; ++i) {*/
-        /*munit_assert(!strset_exist(set, other_lines[i]));*/
-    /*}*/
 
     for (int j = 0; j < iters; j++) {
         if (lines[j])
@@ -164,6 +159,23 @@ static MunitResult test_difference(
         char *lines1[] = { "1", "2", "3", "4", };
         char *lines2[] = { "1", "2", "3", };
         char *should_be[] = { "4", };
+        
+        size_t lines1_num = sizeof(lines1) / sizeof(lines1[0]), 
+               lines2_num = sizeof(lines2) / sizeof(lines2[0]),
+               should_be_num = sizeof(should_be) / sizeof(should_be[0]);
+
+        test_difference_internal(
+            params, data, 
+            lines1, lines1_num, 
+            lines2, lines2_num, 
+            should_be, should_be_num
+        );
+    }
+
+    {
+        char *lines1[] = { "1", "3", "2", "1", };
+        char *lines2[] = { "1", "2", "3", };
+        char *should_be[] = { };
         
         size_t lines1_num = sizeof(lines1) / sizeof(lines1[0]), 
                lines2_num = sizeof(lines2) / sizeof(lines2[0]),
@@ -200,7 +212,7 @@ static MunitResult test_difference(
 static MunitResult test_new_add_exist_free(
     const MunitParameter params[], void* data
 ) {
-    StrSet *set = strset_new();
+    StrSet *set = strset_new(NULL);
     munit_assert_ptr_not_null(set);
 
     const char *lines[] = {
@@ -297,5 +309,6 @@ static const MunitSuite test_suite = {
 };
 
 int main(int argc, char **argv) {
+    koh_hashers_init();
     return munit_suite_main(&test_suite, (void*) "µnit", argc, argv);
 }
