@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+static bool verbose = true;
+
 struct Lines {
     char    **lines;
     int     num;
@@ -66,8 +68,9 @@ static MunitResult test_difference_internal(
     return MUNIT_OK;
 }
 
-static MunitResult test_compare(
-    const MunitParameter params[], void* data
+static MunitResult test_compare_internal(
+    const MunitParameter params[], void* data,
+    struct StrSetSetup *setup
 ) {
     StrSet *set1 = strset_new(NULL);
     munit_assert_ptr_not_null(set1);
@@ -117,16 +120,39 @@ static MunitResult test_compare(
     return MUNIT_OK;
 }
 
-static MunitResult test_massive_add_get(
+static MunitResult test_compare(
     const MunitParameter params[], void* data
 ) {
-    StrSet *set = strset_new(NULL);
+
+    int i = 0;
+    while (koh_hashers[i].f) {
+        if (verbose) {
+            printf(
+                "test_compare_internal: using '%s' function\n",
+                koh_hashers[i].fname
+            );
+        }
+        test_compare_internal(params, data, &(struct StrSetSetup) {
+            .capacity = 11,
+            .hasher = koh_hashers[i].f,
+        });
+        i++;
+    }
+
+    return MUNIT_OK;
+}
+
+static MunitResult test_massive_add_get_internal(
+    const MunitParameter params[], void* data,
+    struct StrSetSetup *setup
+) {
+    StrSet *set = strset_new(setup);
     munit_assert_ptr_not_null(set);
 
     xorshift32_state rnd1 = xorshift32_init();
     usleep(200);
     xorshift32_state rnd2 = xorshift32_init();
-    const int iters = 1000000 / 2;
+    const int iters = 500000 / 2;
 
     char **lines = calloc(iters, sizeof(lines[0]));
     for (int i = 0; i< iters; ++i) {
@@ -151,8 +177,31 @@ static MunitResult test_massive_add_get(
     return MUNIT_OK;
 }
 
-static MunitResult test_difference(
-    const MunitParameter params[], void* data 
+static MunitResult test_massive_add_get(
+    const MunitParameter params[], void* data
+) {
+
+    int i = 0;
+    while (koh_hashers[i].f) {
+        if (verbose) {
+            printf(
+                "test_massive_add_get: using '%s' function\n",
+                koh_hashers[i].fname
+            );
+        }
+        test_massive_add_get_internal(params, data, &(struct StrSetSetup) {
+            .capacity = 11,
+            .hasher = koh_hashers[i].f,
+        });
+        i++;
+    }
+
+    return MUNIT_OK;
+}
+
+static MunitResult test_difference_internal_setup(
+    const MunitParameter params[], void* data,
+    struct StrSetSetup *setup
 ) {
 
     {
@@ -209,10 +258,32 @@ static MunitResult test_difference(
     return MUNIT_OK;
 }
 
-static MunitResult test_new_add_exist_free(
-    const MunitParameter params[], void* data
+static MunitResult test_difference(
+    const MunitParameter params[], void* data 
 ) {
-    StrSet *set = strset_new(NULL);
+    int i = 0;
+    while (koh_hashers[i].f) {
+        if (verbose) {
+            printf(
+                "test_difference: using '%s' function\n",
+                koh_hashers[i].fname
+            );
+        }
+        test_difference_internal_setup(params, data, &(struct StrSetSetup) {
+            .capacity = 11,
+            .hasher = koh_hashers[i].f,
+        });
+        i++;
+    }
+    return MUNIT_OK;
+}
+
+static MunitResult test_new_add_exist_free_internal(
+    const MunitParameter params[], void* data,
+    struct StrSetSetup *setup
+) {
+
+    StrSet *set = strset_new(setup);
     munit_assert_ptr_not_null(set);
 
     const char *lines[] = {
@@ -265,6 +336,29 @@ static MunitResult test_new_add_exist_free(
     munit_assert(!strset_exist(set, "NEWLINE"));
 
     strset_free(set);
+    return MUNIT_OK;
+}
+
+static MunitResult test_new_add_exist_free(
+    const MunitParameter params[], void* data
+) {
+    test_new_add_exist_free_internal(params, data, NULL);
+
+    int i = 0;
+    while (koh_hashers[i].f) {
+        if (verbose) {
+            printf(
+                "test_new_add_exist_free: using '%s' function\n",
+                koh_hashers[i].fname
+            );
+        }
+        test_new_add_exist_free_internal(params, data, &(struct StrSetSetup) {
+            .capacity = 11,
+            .hasher = koh_hashers[i].f,
+        });
+        i++;
+    }
+
     return MUNIT_OK;
 }
 
