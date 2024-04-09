@@ -3,6 +3,7 @@
 
 #include "koh_rand.h"
 #include "koh_strset.h"
+#include "uthash.h"
 #include "munit.h"
 #include <unistd.h>
 #include <memory.h>
@@ -117,6 +118,124 @@ static MunitResult test_compare_internal(
     strset_free(set1);
     strset_free(set2);
     strset_free(set3);
+    return MUNIT_OK;
+}
+
+struct Line {
+    char            line[512];
+    UT_hash_handle  hh;
+};
+
+struct EachCtx {
+    struct Line *lines;
+};
+
+StrSetAction iter_each(const char *key, void *udata) {
+    struct EachCtx *ctx = udata;
+    struct Line *found = NULL;
+    HASH_FIND_STR(ctx->lines, key, found);
+
+    //printf("iter_each: key '%s'\n", key);
+    
+    if (!found)
+        printf("iter_each: key '%s'\n", key);
+       
+    munit_assert_not_null(found);
+    return SSA_next;
+}
+
+static MunitResult test_compare_with_uthash(
+    const MunitParameter params[], void* data
+) {
+    FILE *file_data = fopen("./strset_data1.txt", "r");
+    assert(file_data);
+
+    char line[512] = {};
+    size_t max_line_len = sizeof(line);
+    if (verbose) {
+        printf("test_compare_with_uthash: max_line_len %zu\n", max_line_len);
+    }
+
+    StrSet *set = strset_new(NULL);
+    struct Line *lines = NULL;
+
+    while (fgets(line, max_line_len, file_data)) {
+        //printf("line '%s'\n", line);
+        strset_add(set, line);
+
+        struct Line *found = NULL;
+        HASH_FIND_STR(lines, line, found);
+        if (!found) {
+            struct Line *new = calloc(1, sizeof(*new));
+            assert(new);
+            strncpy(new->line, line, max_line_len);
+            //strcpy(new->line, line);
+            HASH_ADD_STR(lines, line, new);
+        }
+    }
+    fclose(file_data);
+
+    struct Line *item, *tmp;
+
+    if (verbose) {
+        printf("lines count %u\n", HASH_COUNT(lines));
+        printf("strset_count %zu\n", strset_count(set));
+    }
+
+    FILE *T;
+    T = fopen("T_hh.txt", "w");
+    HASH_ITER(hh, lines, item, tmp) {
+        fprintf(T, "%s", item->line);
+        munit_assert(strset_exist(set, item->line));
+    }
+    fclose(T);
+
+    HASH_ITER(hh, lines, item, tmp) {
+        HASH_DEL(lines, item);
+        free(item);
+    }
+
+    T = fopen("T_set.txt", "w");
+    strset_print(set, T);
+    fclose(T);
+
+    struct EachCtx ctx = {
+        .lines = lines,
+    };
+    strset_each(set, iter_each, &ctx);
+
+    strset_free(set);
+    return MUNIT_OK;
+}
+
+static MunitResult test_iter(
+    const MunitParameter params[], void* data
+) {
+    struct StrSet *set = strset_new(NULL);
+
+    const char *lines[] = {
+        "0", "1", "2", "3", NULL,
+    };
+
+    for (int i = 0; lines[i]; i++) {
+        strset_add(set, lines[i]);
+    }
+
+    for (struct StrSetIter i = strset_iter_new(set); strset_iter_valid(&i); 
+        strset_iter_next(&i)
+    ) {
+        for (int j = 0; lines[j]; j++) {
+            if (!strcmp(lines[j], strset_iter_get(&i))) {
+                goto _next;
+            }
+        }
+        munit_assert(false);
+_next:
+        continue;
+    }
+
+    strset_free(set);
+
     return MUNIT_OK;
 }
 
@@ -387,6 +506,7 @@ static MunitTest test_suite_tests[] = {
     MUNIT_TEST_OPTION_NONE,
     NULL
   },
+
   {
     (char*) "/difference",
     test_difference,
@@ -395,6 +515,25 @@ static MunitTest test_suite_tests[] = {
     MUNIT_TEST_OPTION_NONE,
     NULL
   },
+
+  {
+    (char*) "/compare_with_uthash",
+    test_compare_with_uthash,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+
+  {
+    (char*) "/iter",
+    test_iter,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 
