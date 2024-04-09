@@ -1,0 +1,1959 @@
+koh_search_files: path '.' regex_pattern '^dotool.*\.txt$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+dotool_setup_display:
+dotool_setup_display: count 2
+dotool_setup_display: current 1
+dotool_setup_display: monitor 0 position {0.00000, 0.00000}
+dotool_setup_display: width 2560
+dotool_setup_display: height 1600
+dotool_setup_display: phys width 344
+dotool_setup_display: phys height 215
+dotool_setup_display: monitor 1 position {2560.00000, 0.00000}
+dotool_setup_display: width 3840
+dotool_setup_display: height 2160
+dotool_setup_display: phys width 608
+dotool_setup_display: phys height 345
+sc_init: lua version 505.000000
+inotifier_init:
+inotifier_watch: 'assets/init.lua' with data (nil)
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;./assets/?.lua
+Error in gamepad mapping loading:	nil
+l_fpsmeter_stat:
+init done
+load_init_script: loading assets/init.lua was failed with (null)
+seedfromstr: seed 1659700349
+input_init
+stage_new: setup global light user data 'stage_main'
+sfx_init:
+sfx_init: without suffix laser
+sfx_init: without suffix selecting_rocket
+sfx_init: without suffix no_fuel
+sfx_init: without suffix no_fuel
+sfx_init: without suffix chassis_destroyed
+sfx_init: without suffix full_acceleration
+sfx_init: without suffix laser
+sfx_init: without suffix need_pvo
+sfx_init: without suffix phrase
+sfx_init: without suffix no_shots
+sfx_init: without suffix ally_aviation
+sfx_init: without suffix no_fuel
+sfx_init: without suffix roast_good
+sfx_init: without suffix load
+sfx_init: without suffix hit
+sfx_init: without suffix cannon
+sfx_init: without suffix enemy_aviation
+sfx_init: without suffix swamp
+sfx_init: without suffix direct_hit
+sfx_init: without suffix laser
+sfx_init: without suffix load
+stage_add: name 'main_menu', num 1
+stage_add: name 'sprite_loader', num 2
+stage_add: name 'terrain', num 3
+stage_add: name 'new_fight', num 4
+stage_add: name 'box2d', num 5
+stage_add: name 'ecs', num 6
+stage_add: name 'height_color', num 7
+stage_menu_init:
+menu_add: В бой
+menu_add: На улицу
+menu_build: full_longest_caption [[На улицу]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 10
+menu_build: mnu->scroll_rect.width 1236.000000
+menu_add: тест сценария
+menu_add: тест ночь
+menu_add: тест группы деревьев
+menu_add: тест вертолета зигзаг
+menu_add: тест сценарий танков
+menu_add: тест сценарий башен
+menu_add: тест сценарий телепортов
+menu_add: тест imgui
+menu_add: тест зеленое поле, два танка
+menu_add: тест стрелки и метки
+menu_add: тест меток(параграфов)
+menu_add: тест сценарий ангаров
+menu_add: тест частиц(de_ecs)
+menu_add: тест ADSR огибающей
+menu_add: тест перестрелка
+menu_add: тест вертолета прямые маршруты
+menu_add: тест стрелки
+menu_add: тест миникарты
+menu_add: тест лазера
+menu_add: тест сетевой
+menu_add: тест интерфейса
+menu_build: full_longest_caption [[тест вертолета прямые маршруты]]
+menu_build: menu_build: maxwidth_index 15
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1734.000000
+menu_add: Продолжить
+menu_add: Закончить и выйти в главное
+menu_build: full_longest_caption [[Закончить и выйти в главное]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1581.000000
+stage_sprite_loader_init:
+polyline_init:
+polyline_update_opts: line_color {0, 0, 0, 255}
+rectangle_init:
+rectanglea_init:
+patterns_load:
+patterns_load: [table ]
+load_string: str wfc|8per8|brown1\\.out|decal|flame|green|background|gree1n|plot|amx10-top|teleport02-|hangar01|body\\.png|helicopter01.*|grass1
+load_string: [table ]
+load_string: str .*\.png$
+load_string: [table ]
+load_string: str 
+load_string: [table ]
+patterns_load: []
+koh_search_files: path 'assets' regex_pattern '.*\.png$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+koh_search_files: path 'assets' regex_pattern '.*\.aseprite\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+ase_exported_load_lua_code:
+ase_exported_load_lua_code: [table ]
+textures_load_ase_exported:
+koh_search_files: path 'assets/meta' regex_pattern '.*\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+gui_color_combo_set_by_name: colorname RED
+gui_color_combo_set_by_name: found
+gui_color_combo_set_by_name: colorname DARKGRAY
+gui_color_combo_set_by_name: found
+gui_combo_set_by_name: name polyline
+gui_combo_set_by_name: found
+l_fpsmeter_stat:
+stage_sprite_loader_init: could call script stuff
+stage_terrain_init:
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712660974
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0005 seconds
+stage_fight2_init:
+terr_new: max_texture_size 32768
+worker_column: i 0
+opts_print: mapn 4
+opts_print: flat 0.000000
+worker_master: dm_inc 17
+opts_print: rnd 1712660974
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+worker_column: i 0, cycles 18
+opts_print: sleep 0
+opts_print: img_mask (nil)
+graph_init: segs allocated = 76.294 Mb
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0006 seconds
+stage_box2d_init:
+worker_master: sq_inc 16
+worker_master: dm_inc 17
+worker_column: i 0, cycles 64
+graph_init: segs allocated = 76.294 Mb
+remove_small_regions: 0 removed
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712660974
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0006 seconds
+graph_init: there are 64 segments in scene
+spawn_borders: w 3840, h 2160
+body_create: { index = 0, world = 0, revision = 1 }
+body_create: { index = 1, world = 0, revision = 1 }
+body_create: { index = 2, world = 0, revision = 1 }
+body_create: { index = 3, world = 0, revision = 1 }
+worker_column: i 0
+worker_master: sq_inc 16
+texture_gen_template_init: shader compiled successfully
+worker_master: dm_inc 17
+graph_init: there are 64 segments in scene
+texture_gen_template_fill: rt 0x5180000266a8, id 4, tex {id = 13,format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,width = 64,height = 64,mipmaps = 1,}
+worker_column: i 0, cycles 828
+graph_init: segs allocated = 76.294 Mb
+stage_set_active: enter to 'box2d'
+stage_box2d_enter:
+remove_small_regions: 0 removed
+graph_init: there are 64 segments in scene
+main: active stage: box2d
+dotool_send_signal: wake up
+inotifier_handle_events:
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+koh_search_files: path '.' regex_pattern '^dotool.*\.txt$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+dotool_setup_display:
+dotool_setup_display: count 2
+dotool_setup_display: current 1
+dotool_setup_display: monitor 0 position {0.00000, 0.00000}
+dotool_setup_display: width 2560
+dotool_setup_display: height 1600
+dotool_setup_display: phys width 344
+dotool_setup_display: phys height 215
+dotool_setup_display: monitor 1 position {2560.00000, 0.00000}
+dotool_setup_display: width 3840
+dotool_setup_display: height 2160
+dotool_setup_display: phys width 608
+dotool_setup_display: phys height 345
+sc_init: lua version 505.000000
+inotifier_init:
+inotifier_watch: 'assets/init.lua' with data (nil)
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;./assets/?.lua
+Error in gamepad mapping loading:	nil
+l_fpsmeter_stat:
+init done
+load_init_script: loading assets/init.lua was failed with (null)
+seedfromstr: seed 1659700349
+input_init
+stage_new: setup global light user data 'stage_main'
+sfx_init:
+sfx_init: without suffix laser
+sfx_init: without suffix selecting_rocket
+sfx_init: without suffix no_fuel
+sfx_init: without suffix no_fuel
+sfx_init: without suffix chassis_destroyed
+sfx_init: without suffix full_acceleration
+sfx_init: without suffix laser
+sfx_init: without suffix need_pvo
+sfx_init: without suffix phrase
+sfx_init: without suffix no_shots
+sfx_init: without suffix ally_aviation
+sfx_init: without suffix no_fuel
+sfx_init: without suffix roast_good
+sfx_init: without suffix load
+sfx_init: without suffix hit
+sfx_init: without suffix cannon
+sfx_init: without suffix enemy_aviation
+sfx_init: without suffix swamp
+sfx_init: without suffix direct_hit
+sfx_init: without suffix laser
+sfx_init: without suffix load
+stage_add: name 'main_menu', num 1
+stage_add: name 'sprite_loader', num 2
+stage_add: name 'terrain', num 3
+stage_add: name 'new_fight', num 4
+stage_add: name 'box2d', num 5
+stage_add: name 'ecs', num 6
+stage_add: name 'height_color', num 7
+stage_menu_init:
+menu_add: В бой
+menu_add: На улицу
+menu_build: full_longest_caption [[На улицу]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 10
+menu_build: mnu->scroll_rect.width 1236.000000
+menu_add: тест сценария
+menu_add: тест imgui
+menu_add: тест зеленое поле, два танка
+menu_add: тест стрелки
+menu_add: тест ночь
+menu_add: тест сценарий башен
+menu_add: тест сценарий телепортов
+menu_add: тест сценарий ангаров
+menu_add: тест перестрелка
+menu_add: тест вертолета прямые маршруты
+menu_add: тест стрелки и метки
+menu_add: тест меток(параграфов)
+menu_add: тест частиц(de_ecs)
+menu_add: тест ADSR огибающей
+menu_add: тест миникарты
+menu_add: тест лазера
+menu_add: тест сетевой
+menu_add: тест группы деревьев
+menu_add: тест вертолета зигзаг
+menu_add: тест сценарий танков
+menu_add: тест интерфейса
+menu_build: full_longest_caption [[тест вертолета прямые маршруты]]
+menu_build: menu_build: maxwidth_index 9
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1734.000000
+menu_add: Продолжить
+menu_add: Закончить и выйти в главное
+menu_build: full_longest_caption [[Закончить и выйти в главное]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1581.000000
+stage_sprite_loader_init:
+polyline_init:
+polyline_update_opts: line_color {0, 0, 0, 255}
+rectangle_init:
+rectanglea_init:
+patterns_load:
+patterns_load: [table ]
+load_string: str wfc|8per8|brown1\\.out|decal|flame|green|background|gree1n|plot|amx10-top|teleport02-|hangar01|body\\.png|helicopter01.*|grass1
+load_string: [table ]
+load_string: str .*\.png$
+load_string: [table ]
+load_string: str 
+load_string: [table ]
+patterns_load: []
+koh_search_files: path 'assets' regex_pattern '.*\.png$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+koh_search_files: path 'assets' regex_pattern '.*\.aseprite\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+ase_exported_load_lua_code:
+ase_exported_load_lua_code: [table ]
+textures_load_ase_exported:
+koh_search_files: path 'assets/meta' regex_pattern '.*\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+gui_color_combo_set_by_name: colorname RED
+gui_color_combo_set_by_name: found
+gui_color_combo_set_by_name: colorname DARKGRAY
+gui_color_combo_set_by_name: found
+gui_combo_set_by_name: name polyline
+gui_combo_set_by_name: found
+l_fpsmeter_stat:
+stage_sprite_loader_init: could call script stuff
+stage_terrain_init:
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661026
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0004 seconds
+stage_fight2_init:
+terr_new: max_texture_size 32768
+worker_column: i 0
+opts_print: mapn 4
+worker_master: dm_inc 17
+opts_print: flat 0.000000
+opts_print: rnd 1712661026
+opts_print: rtsize 32
+opts_print: tilesize 1024
+worker_column: i 0, cycles 18
+opts_print: rez 64
+opts_print: threads_num 0
+graph_init: segs allocated = 76.294 Mb
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0003 seconds
+stage_box2d_init:
+worker_master: sq_inc 16
+worker_master: dm_inc 17
+worker_column: i 0, cycles 84
+graph_init: segs allocated = 76.294 Mb
+remove_small_regions: 0 removed
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661026
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0004 seconds
+spawn_borders: w 3840, h 2160
+body_create: { index = 0, world = 0, revision = 1 }
+body_create: { index = 1, world = 0, revision = 1 }
+body_create: { index = 2, world = 0, revision = 1 }
+body_create: { index = 3, world = 0, revision = 1 }
+worker_master: sq_inc 16
+worker_master: dm_inc 17
+texture_gen_template_init: shader compiled successfully
+graph_init: there are 62 segments in scene
+texture_gen_template_fill: rt 0x5180000266a8, id 4, tex {id = 13,format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,width = 64,height = 64,mipmaps = 1,}
+worker_column: i 0, cycles 686
+graph_init: segs allocated = 76.294 Mb
+stage_set_active: enter to 'box2d'
+stage_box2d_enter:
+remove_small_regions: 0 removed
+graph_init: there are 62 segments in scene
+main: active stage: box2d
+dotool_send_signal: wake up
+inotifier_handle_events:
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+koh_search_files: path '.' regex_pattern '^dotool.*\.txt$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+dotool_setup_display:
+dotool_setup_display: count 2
+dotool_setup_display: current 1
+dotool_setup_display: monitor 0 position {0.00000, 0.00000}
+dotool_setup_display: width 2560
+dotool_setup_display: height 1600
+dotool_setup_display: phys width 344
+dotool_setup_display: phys height 215
+dotool_setup_display: monitor 1 position {2560.00000, 0.00000}
+dotool_setup_display: width 3840
+dotool_setup_display: height 2160
+dotool_setup_display: phys width 608
+dotool_setup_display: phys height 345
+sc_init: lua version 505.000000
+inotifier_init:
+inotifier_watch: 'assets/init.lua' with data (nil)
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;./assets/?.lua
+Error in gamepad mapping loading:	nil
+l_fpsmeter_stat:
+init done
+load_init_script: loading assets/init.lua was failed with (null)
+seedfromstr: seed 1659700349
+input_init
+stage_new: setup global light user data 'stage_main'
+sfx_init:
+sfx_init: without suffix laser
+sfx_init: without suffix selecting_rocket
+sfx_init: without suffix no_fuel
+sfx_init: without suffix no_fuel
+sfx_init: without suffix chassis_destroyed
+sfx_init: without suffix full_acceleration
+sfx_init: without suffix laser
+sfx_init: without suffix need_pvo
+sfx_init: without suffix phrase
+sfx_init: without suffix no_shots
+sfx_init: without suffix ally_aviation
+sfx_init: without suffix no_fuel
+sfx_init: without suffix roast_good
+sfx_init: without suffix load
+sfx_init: without suffix hit
+sfx_init: without suffix cannon
+sfx_init: without suffix enemy_aviation
+sfx_init: without suffix swamp
+sfx_init: without suffix direct_hit
+sfx_init: without suffix laser
+sfx_init: without suffix load
+stage_add: name 'main_menu', num 1
+stage_add: name 'sprite_loader', num 2
+stage_add: name 'terrain', num 3
+stage_add: name 'new_fight', num 4
+stage_add: name 'box2d', num 5
+stage_add: name 'ecs', num 6
+stage_add: name 'height_color', num 7
+stage_menu_init:
+menu_add: В бой
+menu_add: На улицу
+menu_build: full_longest_caption [[На улицу]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 10
+menu_build: mnu->scroll_rect.width 1236.000000
+menu_add: тест сценария
+menu_add: тест imgui
+menu_add: тест стрелки и метки
+menu_add: тест зеленое поле, два танка
+menu_add: тест меток(параграфов)
+menu_add: тест частиц(de_ecs)
+menu_add: тест ADSR огибающей
+menu_add: тест стрелки
+menu_add: тест ночь
+menu_add: тест миникарты
+menu_add: тест лазера
+menu_add: тест сетевой
+menu_add: тест группы деревьев
+menu_add: тест вертолета зигзаг
+menu_add: тест сценарий танков
+menu_add: тест сценарий башен
+menu_add: тест сценарий телепортов
+menu_add: тест сценарий ангаров
+menu_add: тест перестрелка
+menu_add: тест вертолета прямые маршруты
+menu_add: тест интерфейса
+menu_build: full_longest_caption [[тест вертолета прямые маршруты]]
+menu_build: menu_build: maxwidth_index 19
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1734.000000
+menu_add: Продолжить
+menu_add: Закончить и выйти в главное
+menu_build: full_longest_caption [[Закончить и выйти в главное]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1581.000000
+stage_sprite_loader_init:
+polyline_init:
+polyline_update_opts: line_color {0, 0, 0, 255}
+rectangle_init:
+rectanglea_init:
+patterns_load:
+patterns_load: [table ]
+load_string: str wfc|8per8|brown1\\.out|decal|flame|green|background|gree1n|plot|amx10-top|teleport02-|hangar01|body\\.png|helicopter01.*|grass1
+load_string: [table ]
+load_string: str .*\.png$
+load_string: [table ]
+load_string: str 
+load_string: [table ]
+patterns_load: []
+koh_search_files: path 'assets' regex_pattern '.*\.png$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+koh_search_files: path 'assets' regex_pattern '.*\.aseprite\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+ase_exported_load_lua_code:
+ase_exported_load_lua_code: [table ]
+textures_load_ase_exported:
+koh_search_files: path 'assets/meta' regex_pattern '.*\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+gui_color_combo_set_by_name: colorname RED
+gui_color_combo_set_by_name: found
+gui_color_combo_set_by_name: colorname DARKGRAY
+gui_color_combo_set_by_name: found
+gui_combo_set_by_name: name polyline
+gui_combo_set_by_name: found
+l_fpsmeter_stat:
+stage_sprite_loader_init: could call script stuff
+stage_terrain_init:
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661135
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0004 seconds
+stage_fight2_init:
+terr_new: max_texture_size 32768
+worker_column: i 0
+opts_print: mapn 4
+worker_master: dm_inc 17
+opts_print: flat 0.000000
+opts_print: rnd 1712661135
+opts_print: rtsize 32
+worker_column: i 0, cycles 20
+graph_init: segs allocated = 76.294 Mb
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0007 seconds
+stage_box2d_init:
+worker_column: i 0
+worker_master: sq_inc 16
+worker_master: dm_inc 17
+worker_column: i 0, cycles 59
+graph_init: segs allocated = 76.294 Mb
+remove_small_regions: 0 removed
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661135
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0007 seconds
+graph_init: there are 0 segments in scene
+worker_master: sq_inc 16
+spawn_borders: w 3840, h 2160
+worker_master: dm_inc 17
+body_create: { index = 0, world = 0, revision = 1 }
+worker_column: i 0, cycles 20
+body_create: { index = 1, world = 0, revision = 1 }
+remove_small_regions: 0 removed
+body_create: { index = 2, world = 0, revision = 1 }
+body_create: { index = 3, world = 0, revision = 1 }
+texture_gen_template_init: shader compiled successfully
+texture_gen_template_fill: rt 0x5180000266a8, id 4, tex {id = 13,format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,width = 64,height = 64,mipmaps = 1,}
+graph_init: there are 0 segments in scene
+stage_set_active: enter to 'box2d'
+stage_box2d_enter:
+remove_small_regions: 0 removed
+graph_init: there are 0 segments in scene
+main: active stage: box2d
+dotool_send_signal: wake up
+inotifier_handle_events:
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+spawn_quads: num = 50
+spawn_quad: { pos = {1189.000000, 1940.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1189.000000, 1940.000000}, w = -1.622275, }
+body_create: { index = 4, world = 0, revision = 1 }
+spawn_quad: body { pos = {1189.000000, 1940.000000}, }
+spawn_quad: { pos = {1677.000000, 1452.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1677.000000, 1452.000000}, w = -0.288513, }
+body_create: { index = 5, world = 0, revision = 1 }
+spawn_quad: body { pos = {1677.000000, 1452.000000}, }
+spawn_quad: { pos = {674.000000, 723.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {674.000000, 723.000000}, w = 2.703831, }
+body_create: { index = 6, world = 0, revision = 1 }
+spawn_quad: body { pos = {674.000000, 723.000000}, }
+spawn_quad: { pos = {1209.000000, 1365.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1209.000000, 1365.000000}, w = 1.100839, }
+body_create: { index = 7, world = 0, revision = 1 }
+spawn_quad: body { pos = {1209.000000, 1365.000000}, }
+spawn_quad: { pos = {982.000000, 1095.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {982.000000, 1095.000000}, w = -2.826407, }
+body_create: { index = 8, world = 0, revision = 0 }
+spawn_quad: body { pos = {982.000000, 1095.000000}, }
+spawn_quad: { pos = {3569.000000, 1299.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3569.000000, 1299.000000}, w = 4.373799, }
+body_create: { index = 9, world = 0, revision = 1 }
+spawn_quad: body { pos = {3569.000000, 1299.000000}, }
+spawn_quad: { pos = {2522.000000, 1871.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2522.000000, 1871.000000}, w = -2.748585, }
+body_create: { index = 10, world = 0, revision = 1 }
+spawn_quad: body { pos = {2522.000000, 1871.000000}, }
+spawn_quad: { pos = {853.000000, 1497.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {853.000000, 1497.000000}, w = -6.055285, }
+body_create: { index = 11, world = 0, revision = 1 }
+spawn_quad: body { pos = {853.000000, 1497.000000}, }
+spawn_quad: { pos = {3761.000000, 1561.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3761.000000, 1561.000000}, w = -3.780056, }
+body_create: { index = 12, world = 0, revision = 0 }
+spawn_quad: body { pos = {3761.000000, 1561.000000}, }
+spawn_quad: { pos = {239.000000, 113.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {239.000000, 113.000000}, w = 0.826534, }
+body_create: { index = 13, world = 0, revision = 1 }
+spawn_quad: body { pos = {239.000000, 113.000000}, }
+spawn_quad: { pos = {1824.000000, 135.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1824.000000, 135.000000}, w = 4.709492, }
+body_create: { index = 14, world = 0, revision = 1 }
+spawn_quad: body { pos = {1824.000000, 135.000000}, }
+spawn_quad: { pos = {2123.000000, 650.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2123.000000, 650.000000}, w = 4.240629, }
+body_create: { index = 15, world = 0, revision = 1 }
+spawn_quad: body { pos = {2123.000000, 650.000000}, }
+spawn_quad: { pos = {2403.000000, 1803.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2403.000000, 1803.000000}, w = 1.203254, }
+body_create: { index = 16, world = 0, revision = 1 }
+spawn_quad: body { pos = {2403.000000, 1803.000000}, }
+spawn_quad: { pos = {3099.000000, 2149.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3099.000000, 2149.000000}, w = -1.833712, }
+body_create: { index = 17, world = 0, revision = 1 }
+spawn_quad: body { pos = {3099.000000, 2149.000000}, }
+spawn_quad: { pos = {641.000000, 788.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {641.000000, 788.000000}, w = -4.981490, }
+body_create: { index = 18, world = 0, revision = 0 }
+spawn_quad: body { pos = {641.000000, 788.000000}, }
+spawn_quad: { pos = {50.000000, 1663.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {50.000000, 1663.000000}, w = -0.669215, }
+body_create: { index = 19, world = 0, revision = 1 }
+spawn_quad: body { pos = {50.000000, 1663.000000}, }
+spawn_quad: { pos = {1879.000000, 866.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1879.000000, 866.000000}, w = 3.617931, }
+body_create: { index = 20, world = 0, revision = 1 }
+spawn_quad: body { pos = {1879.000000, 866.000000}, }
+spawn_quad: { pos = {2714.000000, 1224.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2714.000000, 1224.000000}, w = -2.452684, }
+body_create: { index = 21, world = 0, revision = 1 }
+spawn_quad: body { pos = {2714.000000, 1224.000000}, }
+spawn_quad: { pos = {865.000000, 696.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {865.000000, 696.000000}, w = 4.695984, }
+body_create: { index = 22, world = 0, revision = 1 }
+spawn_quad: body { pos = {865.000000, 696.000000}, }
+spawn_quad: { pos = {2692.000000, 1580.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2692.000000, 1580.000000}, w = 2.400023, }
+body_create: { index = 23, world = 0, revision = 1 }
+spawn_quad: body { pos = {2692.000000, 1580.000000}, }
+spawn_quad: { pos = {17.000000, 393.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {17.000000, 393.000000}, w = -1.447871, }
+body_create: { index = 24, world = 0, revision = 1 }
+spawn_quad: body { pos = {17.000000, 393.000000}, }
+spawn_quad: { pos = {3420.000000, 1654.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3420.000000, 1654.000000}, w = -1.931832, }
+body_create: { index = 25, world = 0, revision = 1 }
+spawn_quad: body { pos = {3420.000000, 1654.000000}, }
+spawn_quad: { pos = {653.000000, 1496.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {653.000000, 1496.000000}, w = -1.244026, }
+body_create: { index = 26, world = 0, revision = 1 }
+spawn_quad: body { pos = {653.000000, 1496.000000}, }
+spawn_quad: { pos = {946.000000, 987.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {946.000000, 987.000000}, w = -3.452531, }
+body_create: { index = 27, world = 0, revision = 0 }
+spawn_quad: body { pos = {946.000000, 987.000000}, }
+spawn_quad: { pos = {2857.000000, 1129.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2857.000000, 1129.000000}, w = -3.545875, }
+body_create: { index = 28, world = 0, revision = 1 }
+spawn_quad: body { pos = {2857.000000, 1129.000000}, }
+spawn_quad: { pos = {1599.000000, 1077.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1599.000000, 1077.000000}, w = -0.235931, }
+body_create: { index = 29, world = 0, revision = 1 }
+spawn_quad: body { pos = {1599.000000, 1077.000000}, }
+spawn_quad: { pos = {1632.000000, 802.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1632.000000, 802.000000}, w = -4.767488, }
+body_create: { index = 30, world = 0, revision = 1 }
+spawn_quad: body { pos = {1632.000000, 802.000000}, }
+spawn_quad: { pos = {2186.000000, 225.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2186.000000, 225.000000}, w = 5.956309, }
+body_create: { index = 31, world = 0, revision = 1 }
+spawn_quad: body { pos = {2186.000000, 225.000000}, }
+spawn_quad: { pos = {677.000000, 1798.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {677.000000, 1798.000000}, w = 0.352778, }
+body_create: { index = 32, world = 0, revision = 1 }
+spawn_quad: body { pos = {677.000000, 1798.000000}, }
+spawn_quad: { pos = {2468.000000, 852.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2468.000000, 852.000000}, w = 6.234234, }
+body_create: { index = 33, world = 0, revision = 1 }
+spawn_quad: body { pos = {2468.000000, 852.000000}, }
+spawn_quad: { pos = {649.000000, 14.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {649.000000, 14.000000}, w = 2.968308, }
+body_create: { index = 34, world = 0, revision = 1 }
+spawn_quad: body { pos = {649.000000, 14.000000}, }
+spawn_quad: { pos = {3241.000000, 1310.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3241.000000, 1310.000000}, w = -5.626598, }
+body_create: { index = 35, world = 0, revision = 1 }
+spawn_quad: body { pos = {3241.000000, 1310.000000}, }
+spawn_quad: { pos = {673.000000, 1793.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {673.000000, 1793.000000}, w = 1.508338, }
+body_create: { index = 36, world = 0, revision = 1 }
+spawn_quad: body { pos = {673.000000, 1793.000000}, }
+spawn_quad: { pos = {3300.000000, 2047.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3300.000000, 2047.000000}, w = 1.693371, }
+body_create: { index = 37, world = 0, revision = 1 }
+spawn_quad: body { pos = {3300.000000, 2047.000000}, }
+spawn_quad: { pos = {321.000000, 558.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {321.000000, 558.000000}, w = -0.398093, }
+body_create: { index = 38, world = 0, revision = 1 }
+spawn_quad: body { pos = {321.000000, 558.000000}, }
+spawn_quad: { pos = {1852.000000, 762.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1852.000000, 762.000000}, w = 1.654080, }
+body_create: { index = 39, world = 0, revision = 1 }
+spawn_quad: body { pos = {1852.000000, 762.000000}, }
+spawn_quad: { pos = {2247.000000, 1974.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2247.000000, 1974.000000}, w = 5.557298, }
+body_create: { index = 40, world = 0, revision = 0 }
+spawn_quad: body { pos = {2247.000000, 1974.000000}, }
+spawn_quad: { pos = {3631.000000, 193.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3631.000000, 193.000000}, w = 5.984578, }
+body_create: { index = 41, world = 0, revision = 1 }
+spawn_quad: body { pos = {3631.000000, 193.000000}, }
+spawn_quad: { pos = {1796.000000, 891.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1796.000000, 891.000000}, w = -2.727393, }
+body_create: { index = 42, world = 0, revision = 1 }
+spawn_quad: body { pos = {1796.000000, 891.000000}, }
+spawn_quad: { pos = {3347.000000, 1461.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3347.000000, 1461.000000}, w = 0.000677, }
+body_create: { index = 43, world = 0, revision = 1 }
+spawn_quad: body { pos = {3347.000000, 1461.000000}, }
+spawn_quad: { pos = {975.000000, 444.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {975.000000, 444.000000}, w = -1.854921, }
+body_create: { index = 44, world = 0, revision = 1 }
+spawn_quad: body { pos = {975.000000, 444.000000}, }
+spawn_quad: { pos = {2495.000000, 1082.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2495.000000, 1082.000000}, w = -3.505088, }
+body_create: { index = 45, world = 0, revision = 1 }
+spawn_quad: body { pos = {2495.000000, 1082.000000}, }
+spawn_quad: { pos = {1381.000000, 173.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1381.000000, 173.000000}, w = 0.075157, }
+body_create: { index = 46, world = 0, revision = 1 }
+spawn_quad: body { pos = {1381.000000, 173.000000}, }
+spawn_quad: { pos = {2061.000000, 1405.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2061.000000, 1405.000000}, w = 1.946702, }
+body_create: { index = 47, world = 0, revision = 1 }
+spawn_quad: body { pos = {2061.000000, 1405.000000}, }
+spawn_quad: { pos = {1128.000000, 803.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1128.000000, 803.000000}, w = -5.599774, }
+body_create: { index = 48, world = 0, revision = 1 }
+spawn_quad: body { pos = {1128.000000, 803.000000}, }
+spawn_quad: { pos = {169.000000, 1225.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {169.000000, 1225.000000}, w = 4.574935, }
+body_create: { index = 49, world = 0, revision = 1 }
+spawn_quad: body { pos = {169.000000, 1225.000000}, }
+spawn_quad: { pos = {3544.000000, 1775.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3544.000000, 1775.000000}, w = 1.700699, }
+body_create: { index = 50, world = 0, revision = 1 }
+spawn_quad: body { pos = {3544.000000, 1775.000000}, }
+spawn_quad: { pos = {3232.000000, 704.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {3232.000000, 704.000000}, w = 1.647861, }
+body_create: { index = 51, world = 0, revision = 1 }
+spawn_quad: body { pos = {3232.000000, 704.000000}, }
+spawn_quad: { pos = {1215.000000, 1048.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {1215.000000, 1048.000000}, w = 0.867851, }
+body_create: { index = 52, world = 0, revision = 1 }
+spawn_quad: body { pos = {1215.000000, 1048.000000}, }
+spawn_quad: { pos = {2947.000000, 1792.000000}, poly = { {-50.000000, -50.000000}, {50.000000, -50.000000}, {50.000000, 50.000000}, {-50.000000, 50.000000}, } , v = {2947.000000, 1792.000000}, w = -1.583736, }
+body_create: { index = 53, world = 0, revision = 1 }
+spawn_quad: body { pos = {2947.000000, 1792.000000}, }
+b2World_DestroyBody({ index = 53, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 1
+b2World_DestroyBody({ index = 52, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 2
+b2World_DestroyBody({ index = 51, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 3
+b2World_DestroyBody({ index = 50, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 4
+b2World_DestroyBody({ index = 49, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 5
+b2World_DestroyBody({ index = 48, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 6
+b2World_DestroyBody({ index = 47, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 7
+b2World_DestroyBody({ index = 46, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 8
+b2World_DestroyBody({ index = 45, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 9
+b2World_DestroyBody({ index = 44, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 10
+b2World_DestroyBody({ index = 43, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 11
+b2World_DestroyBody({ index = 42, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 12
+b2World_DestroyBody({ index = 41, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 13
+b2World_DestroyBody({ index = 40, world = 0, revision = 0 })
+delete_all_bodies: destroy_counter 14
+b2World_DestroyBody({ index = 39, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 15
+b2World_DestroyBody({ index = 38, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 16
+b2World_DestroyBody({ index = 37, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 17
+b2World_DestroyBody({ index = 36, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 18
+b2World_DestroyBody({ index = 35, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 19
+b2World_DestroyBody({ index = 34, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 20
+b2World_DestroyBody({ index = 33, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 21
+b2World_DestroyBody({ index = 32, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 22
+b2World_DestroyBody({ index = 31, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 23
+b2World_DestroyBody({ index = 30, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 24
+b2World_DestroyBody({ index = 29, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 25
+b2World_DestroyBody({ index = 28, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 26
+b2World_DestroyBody({ index = 27, world = 0, revision = 0 })
+delete_all_bodies: destroy_counter 27
+b2World_DestroyBody({ index = 26, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 28
+b2World_DestroyBody({ index = 25, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 29
+b2World_DestroyBody({ index = 24, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 30
+b2World_DestroyBody({ index = 23, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 31
+b2World_DestroyBody({ index = 22, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 32
+b2World_DestroyBody({ index = 21, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 33
+b2World_DestroyBody({ index = 20, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 34
+b2World_DestroyBody({ index = 19, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 35
+b2World_DestroyBody({ index = 18, world = 0, revision = 0 })
+delete_all_bodies: destroy_counter 36
+b2World_DestroyBody({ index = 17, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 37
+b2World_DestroyBody({ index = 16, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 38
+b2World_DestroyBody({ index = 15, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 39
+b2World_DestroyBody({ index = 14, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 40
+b2World_DestroyBody({ index = 13, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 41
+b2World_DestroyBody({ index = 12, world = 0, revision = 0 })
+delete_all_bodies: destroy_counter 42
+b2World_DestroyBody({ index = 11, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 43
+b2World_DestroyBody({ index = 10, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 44
+b2World_DestroyBody({ index = 9, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 45
+b2World_DestroyBody({ index = 8, world = 0, revision = 0 })
+delete_all_bodies: destroy_counter 46
+b2World_DestroyBody({ index = 7, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 47
+b2World_DestroyBody({ index = 6, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 48
+b2World_DestroyBody({ index = 5, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 49
+b2World_DestroyBody({ index = 4, world = 0, revision = 1 })
+delete_all_bodies: destroy_counter 50
+koh_search_files: path '.' regex_pattern '^dotool.*\.txt$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+dotool_setup_display:
+dotool_setup_display: count 2
+dotool_setup_display: current 1
+dotool_setup_display: monitor 0 position {0.00000, 0.00000}
+dotool_setup_display: width 2560
+dotool_setup_display: height 1600
+dotool_setup_display: phys width 344
+dotool_setup_display: phys height 215
+dotool_setup_display: monitor 1 position {2560.00000, 0.00000}
+dotool_setup_display: width 3840
+dotool_setup_display: height 2160
+dotool_setup_display: phys width 608
+dotool_setup_display: phys height 345
+sc_init: lua version 505.000000
+inotifier_init:
+inotifier_watch: 'assets/init.lua' with data (nil)
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua
+package.path	/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;./assets/?.lua
+Error in gamepad mapping loading:	nil
+l_fpsmeter_stat:
+init done
+load_init_script: loading assets/init.lua was failed with (null)
+seedfromstr: seed 1659700349
+input_init
+stage_new: setup global light user data 'stage_main'
+sfx_init:
+sfx_init: without suffix laser
+sfx_init: without suffix selecting_rocket
+sfx_init: without suffix no_fuel
+sfx_init: without suffix no_fuel
+sfx_init: without suffix chassis_destroyed
+sfx_init: without suffix full_acceleration
+sfx_init: without suffix laser
+sfx_init: without suffix need_pvo
+sfx_init: without suffix phrase
+sfx_init: without suffix no_shots
+sfx_init: without suffix ally_aviation
+sfx_init: without suffix no_fuel
+sfx_init: without suffix roast_good
+sfx_init: without suffix load
+sfx_init: without suffix hit
+sfx_init: without suffix cannon
+sfx_init: without suffix enemy_aviation
+sfx_init: without suffix swamp
+sfx_init: without suffix direct_hit
+sfx_init: without suffix laser
+sfx_init: without suffix load
+stage_add: name 'main_menu', num 1
+stage_add: name 'sprite_loader', num 2
+stage_add: name 'terrain', num 3
+stage_add: name 'new_fight', num 4
+stage_add: name 'box2d', num 5
+stage_add: name 'ecs', num 6
+stage_add: name 'height_color', num 7
+stage_menu_init:
+menu_add: В бой
+menu_add: На улицу
+menu_build: full_longest_caption [[На улицу]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 10
+menu_build: mnu->scroll_rect.width 1236.000000
+menu_add: тест сценария
+menu_add: тест миникарты
+menu_add: тест лазера
+menu_add: тест вертолета зигзаг
+menu_add: тест сценарий танков
+menu_add: тест сценарий башен
+menu_add: тест сценарий телепортов
+menu_add: тест сценарий ангаров
+menu_add: тест imgui
+menu_add: тест зеленое поле, два танка
+menu_add: тест стрелки и метки
+menu_add: тест меток(параграфов)
+menu_add: тест перестрелка
+menu_add: тест вертолета прямые маршруты
+menu_add: тест частиц(de_ecs)
+menu_add: тест ADSR огибающей
+menu_add: тест стрелки
+menu_add: тест ночь
+menu_add: тест сетевой
+menu_add: тест группы деревьев
+menu_add: тест интерфейса
+menu_build: full_longest_caption [[тест вертолета прямые маршруты]]
+menu_build: menu_build: maxwidth_index 13
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1734.000000
+menu_add: Продолжить
+menu_add: Закончить и выйти в главное
+menu_build: full_longest_caption [[Закончить и выйти в главное]]
+menu_build: menu_build: maxwidth_index 1
+menu_build: mnu->visible_num 21
+menu_build: mnu->scroll_rect.width 1581.000000
+stage_sprite_loader_init:
+polyline_init:
+polyline_update_opts: line_color {0, 0, 0, 255}
+rectangle_init:
+rectanglea_init:
+patterns_load:
+patterns_load: [table ]
+load_string: str wfc|8per8|brown1\\.out|decal|flame|green|background|gree1n|plot|amx10-top|teleport02-|hangar01|body\\.png|helicopter01.*|grass1
+load_string: [table ]
+load_string: str .*\.png$
+load_string: [table ]
+load_string: str 
+load_string: [table ]
+patterns_load: []
+koh_search_files: path 'assets' regex_pattern '.*\.png$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+koh_search_files: path 'assets' regex_pattern '.*\.aseprite\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+match: regex engine small_regex
+ase_exported_load_lua_code:
+ase_exported_load_lua_code: [table ]
+textures_load_ase_exported:
+koh_search_files: path 'assets/meta' regex_pattern '.*\.lua$'
+koh_search_files_small:
+search_files_rec: regex_engine 0
+match: regex engine small_regex
+gui_color_combo_set_by_name: colorname RED
+gui_color_combo_set_by_name: found
+gui_color_combo_set_by_name: colorname DARKGRAY
+gui_color_combo_set_by_name: found
+gui_combo_set_by_name: name polyline
+gui_combo_set_by_name: found
+l_fpsmeter_stat:
+stage_sprite_loader_init: could call script stuff
+stage_terrain_init:
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661180
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0004 seconds
+stage_fight2_init:
+terr_new: max_texture_size 32768
+worker_column: i 0
+opts_print: mapn 4
+opts_print: flat 0.000000
+worker_master: dm_inc 17
+opts_print: rnd 1712661180
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+worker_column: i 0, cycles 21
+opts_print: sleep 0
+graph_init: segs allocated = 76.294 Mb
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0004 seconds
+stage_box2d_init:
+worker_master: sq_inc 16
+worker_master: dm_inc 17
+worker_column: i 0, cycles 134
+graph_init: segs allocated = 76.294 Mb
+remove_small_regions: 0 removed
+terr_new: max_texture_size 32768
+opts_print: mapn 4
+opts_print: flat 0.000000
+opts_print: rnd 1712661180
+opts_print: rtsize 32
+opts_print: tilesize 1024
+opts_print: rez 64
+opts_print: threads_num 0
+opts_print: sleep 0
+opts_print: img_mask (nil)
+opts_print: use_das true
+dasmt_init: map_size 17
+dasmt_init: allocated 0.00 MB
+tiles_load: mapsize 17
+tiles_load: t->rez 64
+tiles_load: t->tilesize 1024
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 1
+tiles_load: creating tiles textures for 0.0005 seconds
+graph_init: there are 38 segments in scene
+spawn_borders: w 3840, h 2160
+body_create: { index = 0, world = 0, revision = 1 }
+body_create: { index = 1, world = 0, revision = 1 }
+body_create: { index = 2, world = 0, revision = 1 }
+body_create: { index = 3, world = 0, revision = 1 }
+worker_column: i 0
+worker_master: sq_inc 16
+remove_small_regions: 0 removed
+texture_gen_template_init: shader compiled successfully
+worker_master: dm_inc 17
+graph_init: there are 38 segments in scene
+texture_gen_template_fill: rt 0x5180000266a8, id 4, tex {id = 13,format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,width = 64,height = 64,mipmaps = 1,}
+worker_column: i 0, cycles 597
+graph_init: segs allocated = 76.294 Mb
+stage_set_active: enter to 'box2d'
+stage_box2d_enter:
+remove_small_regions: 0 removed
+graph_init: there are 38 segments in scene
+main: active stage: box2d
+dotool_send_signal: wake up
+inotifier_handle_events:
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+stage_set_active: leave from 'box2d'
+stage_box2d_leave:
+stage_set_active: enter to 'main_menu'
+stage_menu_enter:
+menu_select:
+menu_select:
+select_level_action: тест сценарий танков - 14.lua
+select_level_action: []
+select_level_action: lua error assets/store/14.lua:2: attempt to call a nil value (field 'loaded')
+menu_select:
+select_level_action: тест сценарий танков - 14.lua
+select_level_action: [’assets/store/14.lua:2: attempt to call a nil value (field 'loaded')’ ]
+select_level_action: lua error assets/store/14.lua:2: attempt to call a nil value (field 'loaded')
+menu_select:
+select_level_action: тест сценарий танков - 14.lua
+select_level_action: [’assets/store/14.lua:2: attempt to call a nil value (field 'loaded')’ ]
+select_level_action: lua error assets/store/14.lua:2: attempt to call a nil value (field 'loaded')
+menu_select:
+select_level_action: тест сценарий танков - 14.lua
+select_level_action: [’assets/store/14.lua:2: attempt to call a nil value (field 'loaded')’ ]
+select_level_action: lua error assets/store/14.lua:2: attempt to call a nil value (field 'loaded')
+menu_select:
+select_level_action: тест сценарий танков - 14.lua
+select_level_action: [’assets/store/14.lua:2: attempt to call a nil value (field 'loaded')’ ]
+select_level_action: lua error assets/store/14.lua:2: attempt to call a nil value (field 'loaded')
+stage_set_active: leave from 'main_menu'
+stage_menu_leave:
+stage_set_active: enter to 'terrain'
+stage_terrain_enter:
+koh_search_files: path 'assets/gfx/map_masks' regex_pattern '.*\.png$'
+koh_search_files_small:
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+button_build_gui: from seed_str
+button_build_gui: opts->rnd.a 1712661204
+terr_new: max_texture_size 32768
+opts_print: mapn 9
+opts_print: flat 0.000000
+opts_print: rnd 1712661204
+opts_print: rtsize 32
+opts_print: tilesize 2048
+opts_print: rez 64
+opts_print: threads_num 1
+opts_print: sleep 0
+opts_print: img_mask 0x5020003e9950
+opts_print: use_das true
+dasmt_init: map_size 513
+dasmt_init: allocated 1.00 MB
+tiles_load: mapsize 513
+tiles_load: t->rez 64
+tiles_load: t->tilesize 2048
+tiles_load: r->rt_size 32
+tiles_load: t->tilesnum 16
+tiles_load: creating tiles textures for 0.0631 seconds
+worker_master: sq_inc 512
+worker_column: i 0
+worker_master: dm_inc 513
+koh_search_files: path 'assets/gfx/map_masks' regex_pattern '.*\.png$'
+koh_search_files_small:
+worker_column: i 0, cycles 38
+graph_init: segs allocated = 76.294 Mb
+remove_small_regions: 0 removed
+graph_init: there are 1170 segments in scene
+_tiles_prerender: min_map_height 0.220000
+_tiles_prerender: max_map_height 0.470000
+_tiles_prerender: brown_color = 0, black_color = 0
+tabe_tab: [’assets/store/14.lua:2: attempt to call a nil value (field 'loaded')’ ]
+-> type
+stage_set_active: leave from 'terrain'
+stage_terrain_leave:
+stage_set_active: enter to 'sprite_loader'
+stage_sprite_loader_enter:
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
+gui_meta_listbox: st->meta_selected '(nil)'
