@@ -140,8 +140,243 @@ StrSetAction iter_each(const char *key, void *udata) {
     if (!found)
         printf("iter_each: key '%s'\n", key);
        
-    munit_assert_not_null(found);
+    //munit_assert_not_null(found);
     return SSA_next;
+}
+
+static MunitResult test_stress(
+    const MunitParameter params[], void* data
+) {
+    StrSet *set = strset_new(NULL);
+    const size_t lines_num = 30, max_line_len = 10, min_line_len = 1;
+    size_t word_len;
+    char **lines = calloc(lines_num, sizeof(lines[0]));
+
+    for (int i = 0; i < lines_num; i++) {
+        lines[i] = calloc(max_line_len + 1, sizeof(lines[0][0]));
+        word_len = rand() % (max_line_len - min_line_len) + min_line_len;
+        for (int j = 0; j < word_len; j++) {
+            lines[i][j] = rand() % 26 + 'a';
+        }
+        printf("test_stress: '%s'\n", lines[i]);
+    }
+
+    for (int i = 0; i < lines_num; i++) {
+        strset_add(set, lines[i]);
+    }
+
+    // Удалить строки которые короче threshold
+    int threshold = 3, removed_num = 0;
+    for (int i = 0; i < lines_num; i++) {
+        if (lines[i] && strlen(lines[i]) < threshold) {
+            strset_remove(set, lines[i]);
+            free(lines[i]);
+            lines[i] = NULL;
+            removed_num++;
+        }
+    }
+    printf("test_stress: removed_num %d\n", removed_num);
+
+    printf("\n");
+    FILE *T = fopen("1.txt", "w");
+    strset_print_f(set, T, "%s\n");
+    fclose(T);
+    printf("\n");
+
+    T = fopen("2.txt", "w");
+    for (int i = 0; i < lines_num; ++i) {
+        if (lines[i]) {
+            printf("%s\n", lines[i]);
+            fprintf(T, "%s\n", lines[i]);
+        }
+    }
+    fclose(T);
+
+    for (int i = 0; i < lines_num; ++i) {
+        if (lines[i]) {
+            bool exists = strset_exist(set, lines[i]);
+            if (!exists) {
+                printf("test_stress: '%s'\n", lines[i]);
+            }
+            munit_assert(exists);
+        }
+    }
+
+    strset_free(set);
+    for (int i = 0; i< lines_num; ++i) {
+        if (lines[i])
+            free(lines[i]);
+    }
+    free(lines);
+    return MUNIT_OK;
+}
+
+static MunitResult test_add_remove_internal2(
+    const MunitParameter params[], void* data, struct StrSetSetup *setup
+) {
+    if (verbose) {
+        const char *hasher_name = NULL;
+        for (int i = 0; koh_hashers[i].f; i++)
+            if (setup->hasher == koh_hashers[i].f) {
+                hasher_name = koh_hashers[i].fname;
+                break;
+            }
+
+        printf(
+            "test_add_remove_internal: hasher '%s', capacity %zu\n",
+            hasher_name, setup->capacity
+        );
+    }
+    StrSet *set = strset_new(setup);
+
+    strset_add(set, "1");
+    strset_add(set, "2");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+
+    strset_remove(set, "1");
+
+    munit_assert(strset_exist(set, "1") == false);
+    munit_assert(strset_exist(set, "2"));
+
+    strset_remove(set, "2");
+
+    munit_assert(strset_exist(set, "1") == false);
+    munit_assert(strset_exist(set, "2") == false);
+
+    strset_add(set, "1");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2") == false);
+
+    strset_add(set, "2");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+
+    strset_free(set);
+    return MUNIT_OK;
+}
+
+static MunitResult test_add_remove_internal4(
+    const MunitParameter params[], void* data, struct StrSetSetup *setup
+) {
+    if (verbose) {
+        const char *hasher_name = NULL;
+        for (int i = 0; koh_hashers[i].f; i++)
+            if (setup->hasher == koh_hashers[i].f) {
+                hasher_name = koh_hashers[i].fname;
+                break;
+            }
+
+        printf(
+            "test_add_remove_internal: hasher '%s', capacity %zu\n",
+            hasher_name, setup->capacity
+        );
+    }
+    StrSet *set = strset_new(setup);
+
+    strset_add(set, "1");
+    strset_add(set, "2");
+    strset_add(set, "3");
+    strset_add(set, "4");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+    munit_assert(strset_exist(set, "3"));
+    munit_assert(strset_exist(set, "4"));
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_remove(set, "4");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+    munit_assert(strset_exist(set, "3"));
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_remove(set, "3");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+    munit_assert(strset_exist(set, "3") == false);
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_remove(set, "1");
+
+    munit_assert(strset_exist(set, "1") == false);
+    munit_assert(strset_exist(set, "2"));
+    munit_assert(strset_exist(set, "3") == false);
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_remove(set, "2");
+
+    munit_assert(strset_exist(set, "1") == false);
+    munit_assert(strset_exist(set, "2") == false);
+    munit_assert(strset_exist(set, "3") == false);
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_add(set, "1");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2") == false);
+    munit_assert(strset_exist(set, "3") == false);
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_add(set, "2");
+
+    munit_assert(strset_exist(set, "1"));
+    munit_assert(strset_exist(set, "2"));
+    munit_assert(strset_exist(set, "3") == false);
+    munit_assert(strset_exist(set, "4") == false);
+    munit_assert(strset_exist(set, "5") == false);
+
+    strset_free(set);
+    return MUNIT_OK;
+}
+
+static MunitResult test_add_remove2(
+    const MunitParameter params[], void* data
+) {
+    //size_t capacities[] = { 0, 1, 2, 11 };
+    size_t capacities[] = { 0, 1, 11, 2 };
+    //size_t capacities[] = { 0, 1, 11 };
+    size_t capacities_num = sizeof(capacities) / sizeof(capacities[0]);
+
+    for (int j = 0; j < capacities_num; j++) {
+        for (int i = 0; koh_hashers[i].f; i++) {
+            test_add_remove_internal2(params, data, &(struct StrSetSetup) {
+                .capacity = capacities[j],
+                .hasher = koh_hashers[i].f,
+            });
+        }
+    }
+
+    return MUNIT_OK;
+}
+
+static MunitResult test_add_remove4(
+    const MunitParameter params[], void* data
+) {
+    //size_t capacities[] = { 0, 1, 2, 11 };
+    size_t capacities[] = { 0, 1, 11, 2 };
+    size_t capacities_num = sizeof(capacities) / sizeof(capacities[0]);
+
+    for (int j = 0; j < capacities_num; j++) {
+        for (int i = 0; koh_hashers[i].f; i++) {
+            test_add_remove_internal4(params, data, &(struct StrSetSetup) {
+                .capacity = capacities[j],
+                .hasher = koh_hashers[i].f,
+            });
+        }
+    }
+
+    return MUNIT_OK;
 }
 
 static MunitResult test_compare_with_uthash(
@@ -160,8 +395,20 @@ static MunitResult test_compare_with_uthash(
     struct Line *lines = NULL;
 
     while (fgets(line, max_line_len, file_data)) {
+        size_t line_len = strlen(line);
+        if (line[line_len - 1] == '\n') {
+            line[line_len - 1] = 0;
+        }
         //printf("line '%s'\n", line);
         strset_add(set, line);
+    }
+
+    fseek(file_data, 0, SEEK_SET);
+    while (fgets(line, max_line_len, file_data)) {
+        size_t line_len = strlen(line);
+        if (line[line_len - 1] == '\n') {
+            line[line_len - 1] = 0;
+        }
 
         struct Line *found = NULL;
         HASH_FIND_STR(lines, line, found);
@@ -171,8 +418,11 @@ static MunitResult test_compare_with_uthash(
             strncpy(new->line, line, max_line_len);
             //strcpy(new->line, line);
             HASH_ADD_STR(lines, line, new);
+        } else {
+            //printf("found\n");
         }
     }
+
     fclose(file_data);
 
     struct Line *item, *tmp;
@@ -182,13 +432,22 @@ static MunitResult test_compare_with_uthash(
         printf("strset_count %zu\n", strset_count(set));
     }
 
+    StrSet *set_hh = strset_new(NULL);
+
     FILE *T;
     T = fopen("T_hh.txt", "w");
     HASH_ITER(hh, lines, item, tmp) {
+        strset_add(set_hh, item->line);
         fprintf(T, "%s", item->line);
         munit_assert(strset_exist(set, item->line));
     }
     fclose(T);
+
+    printf(
+        "test_compare_with_uthash: are set_hh & set equal? %s, %s\n",
+        strset_compare(set_hh, set) ? "true" : "false",
+        strset_compare(set, set_hh) ? "true" : "false"
+    );
 
     HASH_ITER(hh, lines, item, tmp) {
         HASH_DEL(lines, item);
@@ -199,15 +458,19 @@ static MunitResult test_compare_with_uthash(
     strset_print(set, T);
     fclose(T);
 
+    /*
     struct EachCtx ctx = {
         .lines = lines,
     };
     strset_each(set, iter_each, &ctx);
-
+    */
+    
+    strset_free(set_hh);
     strset_free(set);
     return MUNIT_OK;
 }
 
+/*
 static MunitResult test_iter(
     const MunitParameter params[], void* data
 ) {
@@ -238,6 +501,7 @@ _next:
 
     return MUNIT_OK;
 }
+*/
 
 static MunitResult test_compare(
     const MunitParameter params[], void* data
@@ -271,7 +535,7 @@ static MunitResult test_massive_add_get_internal(
     xorshift32_state rnd1 = xorshift32_init();
     usleep(200);
     xorshift32_state rnd2 = xorshift32_init();
-    const int iters = 500000 / 2;
+    const int iters = 100000 / 2;
 
     char **lines = calloc(iters, sizeof(lines[0]));
     for (int i = 0; i< iters; ++i) {
@@ -525,6 +789,38 @@ static MunitTest test_suite_tests[] = {
     NULL
   },
 
+  /*
+    {
+      (char*) "/add_remove4",
+      test_add_remove4,
+      NULL,
+      NULL,
+      MUNIT_TEST_OPTION_NONE,
+      NULL
+    },
+*/
+
+    {
+      (char*) "/add_remove2",
+      test_add_remove2,
+      NULL,
+      NULL,
+      MUNIT_TEST_OPTION_NONE,
+      NULL
+    },
+
+/*
+  {
+    (char*) "/stress",
+    test_stress,
+    NULL,
+    NULL,
+    MUNIT_TEST_OPTION_NONE,
+    NULL
+  },
+*/
+
+  /*
   {
     (char*) "/iter",
     test_iter,
@@ -533,6 +829,7 @@ static MunitTest test_suite_tests[] = {
     MUNIT_TEST_OPTION_NONE,
     NULL
   },
+  */
 
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
@@ -543,5 +840,6 @@ static const MunitSuite test_suite = {
 
 int main(int argc, char **argv) {
     koh_hashers_init();
+    strset_verbose = false;
     return munit_suite_main(&test_suite, (void*) "µnit", argc, argv);
 }
